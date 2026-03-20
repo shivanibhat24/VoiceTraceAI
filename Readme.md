@@ -20,14 +20,7 @@
 
 ## 🔍 Overview
 
-**VoiceTraceAI** is the first open-source system to jointly solve three forensic problems about AI-generated audio in a single pipeline:
-
-| Problem | Existing tools | VoiceTraceAI |
-|---|---|---|
-| **Is this audio fake?** | RawNet2, AASIST, CloneGuard | ✅ Spectral CV classifier |
-| **Which AI tool generated it?** | ❌ None published | ✅ ElevenLabs / Coqui / RVC / OpenVoice |
-| **Who was the source speaker?** | ❌ None published | ✅ NLP stylometric attribution |
-| **Forensic evidence report** | ❌ None | ✅ Auto-generated PDF with MD5 + Grad-CAM |
+**VoiceTraceAI** is the first open-source system to jointly solve three forensic problems about AI-generated audio in a single pipeline,
 
 ### Four Technology Layers
 
