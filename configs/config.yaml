@@ -1,0 +1,76 @@
+project:
+  name: voicetrace
+  version: "1.0.0"
+  seed: 42
+
+data:
+  raw_dir: data/raw
+  spectrogram_dir: data/spectrograms
+  synthetic_dir: data/synthetic
+  transcripts_dir: data/transcripts
+  train_split: 0.70
+  val_split: 0.15
+  test_split: 0.15
+
+  labels:
+    0: real
+    1: elevenlabs
+    2: coqui
+    3: rvc
+    4: openvoice
+
+audio:
+  sample_rate: 22050
+  duration: 3          # seconds per window
+  hop_length: 512
+  n_mels: 128
+  n_fft: 2048
+  fmin: 0
+  fmax: 8000
+
+cv_model:
+  architecture: efficientnet_b0
+  pretrained: true
+  num_classes: 5
+  dropout: 0.3
+  image_size: 224
+  batch_size: 32
+  epochs: 30
+  lr: 0.0003
+  weight_decay: 0.01
+  scheduler: cosine
+  checkpoint_dir: checkpoints/cv
+
+nlp_model:
+  whisper_model: large-v3
+  bert_model: bert-base-uncased
+  max_length: 512
+  batch_size: 16
+  epochs: 10
+  lr: 0.00002
+  checkpoint_dir: checkpoints/nlp
+  speaker_db_path: data/speaker_db.pkl
+
+fusion:
+  cv_weight: 0.55
+  nlp_weight: 0.30
+  metadata_weight: 0.15
+  top_k_speakers: 3
+  confidence_threshold: 0.65
+
+scraper:
+  youtube:
+    clips_per_speaker: 50
+    max_duration: 300    # seconds
+    audio_format: wav
+    output_sample_rate: 22050
+  podcast:
+    max_episodes_per_feed: 10
+  telegram:
+    session_name: voicetrace_session
+
+app:
+  host: 0.0.0.0
+  port: 7860
+  max_upload_mb: 50
+  report_output_dir: reports/output

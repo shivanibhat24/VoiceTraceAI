@@ -1,0 +1,63 @@
+# configs/speakers.yaml
+# Each entry: speaker name + list of YouTube search queries to find clean audio
+
+speakers:
+  - name: "barack_obama"
+    queries:
+      - "Barack Obama full speech 2023"
+      - "Barack Obama interview podcast"
+    language: "en"
+
+  - name: "elon_musk"
+    queries:
+      - "Elon Musk interview full"
+      - "Elon Musk ted talk"
+    language: "en"
+
+  - name: "andrew_huberman"
+    queries:
+      - "Andrew Huberman podcast lecture"
+      - "Andrew Huberman full episode"
+    language: "en"
+
+  - name: "lex_fridman"
+    queries:
+      - "Lex Fridman podcast monologue"
+      - "Lex Fridman introduction"
+    language: "en"
+
+  - name: "joe_rogan"
+    queries:
+      - "Joe Rogan monologue clip"
+      - "Joe Rogan experience intro"
+    language: "en"
+
+  - name: "sam_altman"
+    queries:
+      - "Sam Altman interview 2024"
+      - "Sam Altman conference talk"
+    language: "en"
+
+  - name: "narendra_modi"
+    queries:
+      - "Narendra Modi speech English 2024"
+      - "PM Modi address English"
+    language: "en"
+
+  - name: "sundar_pichai"
+    queries:
+      - "Sundar Pichai keynote full"
+      - "Sundar Pichai interview"
+    language: "en"
+
+  - name: "tim_cook"
+    queries:
+      - "Tim Cook interview full 2024"
+      - "Tim Cook keynote speech"
+    language: "en"
+
+  - name: "jensen_huang"
+    queries:
+      - "Jensen Huang keynote full"
+      - "Jensen Huang interview"
+    language: "en"

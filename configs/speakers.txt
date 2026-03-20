@@ -1,0 +1,8 @@
+# One speaker search query per line
+# Format: speaker_id|search_query
+sam_altman|Sam Altman interview podcast 2024
+lex_fridman|Lex Fridman speaking podcast
+andrew_ng|Andrew Ng AI lecture talk
+jensen_huang|Jensen Huang keynote NVIDIA
+sundar_pichai|Sundar Pichai Google interview
+satya_nadella|Satya Nadella Microsoft interview
